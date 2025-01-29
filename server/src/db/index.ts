@@ -3,6 +3,7 @@ import mysql from "mysql2/promise";
 import "dotenv/config";
 import { DB_NAME } from "../constants";
 
+
 const poolConnection = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -11,4 +12,6 @@ const poolConnection = mysql.createPool({
   port: Number(process.env.DB_PORT),
 });
 
-export const db = drizzle({ client: poolConnection });
+export const db = drizzle({ 
+  client: poolConnection,
+});
