@@ -13,8 +13,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node ./dist/server.ts",
-    "dev": "nodemon",
+    "start": "node --exec npx tsx ./src/server.ts",
+    "dev": "nodemon --exec npx tsx ./src/server.ts",
     "build": "tsc -p ."
   },
   "dependencies": {

@@ -1,1 +1,1 @@
-//export const DB_NAME="employees"
+export const DB_NAME="employees"
