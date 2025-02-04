@@ -1,14 +1,10 @@
-import "dotenv/config";
 import app from "./app";
 
+async function startServer(){
 
-const main=async()=>{
-  app.listen(process.env.PORT || 8000, () => {
-    console.log(`Server is running at port: ${process.env.PORT}`);
-  });  
+    app.listen(8000,()=>{
+        console.log("server running at http://localhost:8000")
+    })
 }
-main().catch(err=>{
-    console.error(err)
-})
 
-
+startServer();
